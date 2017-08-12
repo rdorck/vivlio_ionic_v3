@@ -1,20 +1,20 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyDO3rdhjSRRcRwVb74pek5G_AihkTLf1ys",
-  authDomain: "vivlio-b09ba.firebaseapp.com",
-  databaseURL: "https://vivlio-b09ba.firebaseio.com",
-  projectId: "vivlio-b09ba",
-  storageBucket: "vivlio-b09ba.appspot.com",
-  messagingSenderId: "635588999884"
+  apiKey: "API_KEY",
+  authDomain: "APP_ID.firebaseapp.com",
+  databaseURL: "https://APP_ID.firebaseio.com",
+  projectId: "APP_ID",
+  storageBucket: "APP_ID.appspot.com",
+  messagingSenderId: "MESSAGE_SENDER_ID"
 };
 
 export const facebookConfig = {
-  apiKey: '478047679193199',
-  clientToken: 'b528930e4a9b481332cec376ec91a7a4'
+  apiKey: '',
+  clientToken: ''
 };
 
 export const twitterConfig = {
-  apiKey: 'lYiFyP9AGYchnNasCNRU5RUVL',
-  accessToken: '837116664936267777-xd2kvIaQu7TyGLOeOlIv0FP2KNWd2bW',
+  apiKey: '',
+  accessToken: '',
   appOnlyAuth: 'https://api.twitter.com/oauth2/token',
   requestTokenURL: 'https://api.twitter.com/oauth/request_token',
   authorizeURL: 'https://api.twitter.com/oauth/authorize',
@@ -22,12 +22,12 @@ export const twitterConfig = {
 };
 
 export const campusBooks = {
-  apiKey: 'viVyVlvJE9cP1bl4RJHN',
+  apiKey: '',
   apiURL: 'http://api2.campusbooks.com/12/rest/',
-  apiPrices: 'http://api2.campusbooks.com/12/rest/prices?key=viVyVlvJE9cP1bl4RJHN&isbn=',
-  apiBookInfo: 'http://api2.campusbooks.com/12/rest/bookinfo?key=viVyVlvJE9cP1bl4RJHN&isbn=',
-  apiSearch: 'http://api2.campusbooks.com/12/rest/search?key=viVyVlvJE9cP1bl4RJHN',
-  apiBookPrices: 'http://api2.campusbooks.com/12/rest/bookprices?key=viVyVlvJE9cP1bl4RJHN&isbn=',
-  apiBuyBackPrices: 'http://api2.campusbooks.com/12/rest/buybackprices?key=viVyVlvJE9cP1bl4RJHN&isbn=',
-  apiMerchants: 'http://api2.campusbooks.com/12/rest/merchants?key=viVyVlvJE9cP1bl4RJHN'
+  apiPrices: 'http://api2.campusbooks.com/12/rest/prices?key=&isbn=',
+  apiBookInfo: 'http://api2.campusbooks.com/12/rest/bookinfo?key=&isbn=',
+  apiSearch: 'http://api2.campusbooks.com/12/rest/search?key=',
+  apiBookPrices: 'http://api2.campusbooks.com/12/rest/bookprices?key=&isbn=',
+  apiBuyBackPrices: 'http://api2.campusbooks.com/12/rest/buybackprices?key=&isbn=',
+  apiMerchants: 'http://api2.campusbooks.com/12/rest/merchants?key='
 };
