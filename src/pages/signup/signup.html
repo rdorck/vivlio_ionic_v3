@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [(formGroup)]="signupForm" (submit)="signup()">
+    <ion-list>
+      <ion-item>
+        <ion-label required floating>First Name *</ion-label>
+        <ion-input type="text" formControlName="firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label required floating>Last Name *</ion-label>
+        <ion-input type="text" formControlName="lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label required floating>Email *</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label required floating>Password *</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <p>* Required</p>
+
+    <ion-fab center>
+      <button ion-fab style="margin-top: 15px;" [disabled]="!signupForm.valid"><img src="assets/8th-Wonder-Icon.png"></button>
+    </ion-fab>
+  </form>
+
+  <ion-fab bottom right style="margin-top: 300px;">
+    <button ion-fab color="vibrant"><ion-icon name="at"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="signupFacebook()"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

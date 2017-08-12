@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ book }}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="dismissModal()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- Establish Grid -->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 offset-1>
+        <ion-thumbnail>
+          <img id="thumbnail" src="/assets/8th-Wonder-Icon.png" />
+        </ion-thumbnail>
+      </ion-col>
+
+      <ion-col col-6>
+        <p><span>Author:</span> Plato </p>
+        <p><span>ISBN:</span> ########## </p>
+        <p><span>Edition:</span> ## </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- FIN Grid -->
+
+  <!-- Price Range -->
+  <ion-row padding>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label> Price Range: </ion-label>
+          <ion-range pin="true" min="50" max="400" step="10" color="secondary">
+            <ion-label range-left> Min <b>$</b></ion-label>
+            <ion-label range-right> Max <b>$</b></ion-label>
+            <ion-icon range-right name="usd"></ion-icon>
+          </ion-range>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <!-- Condition Segment -->
+  <div padding>
+    <ion-segment>
+      <ion-segment-button value="used"> Used </ion-segment-button>
+
+      <ion-segment-button value="new"> New </ion-segment-button>
+
+      <ion-segment-button value="ebook"> E-Book </ion-segment-button>
+
+      <ion-segment-button value="rental"> Rental </ion-segment-button>
+    </ion-segment>
+  </div>
+  <!-- FIN Condition Segment -->
+
+</ion-content>

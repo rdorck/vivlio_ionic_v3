@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{ displayName }}'s Profile</h1>
+
+  <ion-fab top right>
+    <ion-avatar ion-fab (click)="updateAvatar()" color="primary">
+      <!--<img src="" />-->
+    </ion-avatar>
+  </ion-fab>
+
+  <form validate [(formGroup)]="profileForm" (submit)="saveProfile()" style="margin-top: 50px;">
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" fixed>First Name</ion-label>
+        <ion-input type="text" formControlName="firstName" placeholder="First Name" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" fixed>Last Name</ion-label>
+        <ion-input type="text" formControlName="lastName" placeholder="Last Name" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Email *</ion-label>
+        <ion-input type="email" formControlName="email" value="" clearInput></ion-input>
+      </ion-item>
+    </ion-list>
+    <p>* Required</p>
+
+    <ion-fab bottom center>
+      <button ion-fab type="submit" color="primary">Save</button>
+    </ion-fab>
+  </form>
+
+</ion-content>

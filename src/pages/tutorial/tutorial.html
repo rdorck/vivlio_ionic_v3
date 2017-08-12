@@ -1,0 +1,40 @@
+<ion-content>
+
+  <!-- Slides -->
+  <ion-slides (ionSlideDidChange)="slideDidChange()" pager>
+    <div>
+      <ion-fab right top>
+        <button ion-fab (click)="skip()">Skip</button>
+      </ion-fab>
+    </div>
+    <ion-slide>
+      <h2>Welcome to Vivlio!</h2>
+      <p>A minimalistic way to buy books!</p>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Search</h2>
+      <ion-searchbar disabled></ion-searchbar>
+      <p>By Author or ISBNs</p>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-fab center top>
+        <button ion-fab><ion-icon name="lock"></ion-icon></button>
+      </ion-fab>
+      <h2>Secure Checkout</h2>
+      <p>A painless process without the stress.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Start</h2>
+      <p>Search Easy!</p>
+      <ion-fab center style="margin-top: 15px;">
+        <button ion-fab (click)="goHome()"><ion-icon name="arrow-forward"></ion-icon></button>
+      </ion-fab>
+    </ion-slide>
+
+  </ion-slides>
+  <!-- End Slides -->
+
+</ion-content>

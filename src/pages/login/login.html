@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [(formGroup)]="loginForm" (submit)="login('email')">
+    <ion-list>
+      <ion-item>
+        <ion-label required floating>Email *</ion-label>
+        <ion-input type="email" formControlName="email" autofocus></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label required floating>Password *</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <p>* Required</p>
+
+    <ion-fab center style="margin-top: 15px;">
+      <button ion-fab [disabled]="!loginForm.valid" style="background-color: #029925"><ion-icon name="key"></ion-icon></button>
+    </ion-fab>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Not a member? <a (click)="pushSignup()">Signup</a></p>
+    </div>
+    <div class="col-sm-4" style="margin-left: auto">
+      <p>Password Reset: <a (click)="resetPassword()">Here</a></p>
+    </div>
+  </div>
+
+  <ion-fab right bottom>
+    <button ion-fab><ion-icon name="at"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="login('facebook')"><ion-icon name="logo-facebook"></ion-icon></button>
+      <!--<button ion-fab (click)="login('twitter')"><ion-icon name="logo-twitter"></ion-icon></button>-->
+      <!--<button ion-fab (click)="login('google')"><ion-icon name="logo-googleplus"></ion-icon></button>-->
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
